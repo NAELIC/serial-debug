@@ -1,0 +1,22 @@
+{
+    "name": "swo-library",
+    "version": "1.0.0",
+    "description": "Monitor your board via J-LINK",
+    "keywords": "shell, terminal",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/Rhoban/mbed-shell.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Etienne SCHMITZ",
+        "email": "contact@etienne-schmitz.com",
+        "url": "https://www.etienne-schmitz.com/"
+      }
+    ],
+    "license": "MIT",
+    "frameworks": "*",
+    "platforms": "*"
+  }
