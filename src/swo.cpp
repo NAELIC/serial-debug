@@ -42,9 +42,21 @@ namespace naelic
         printf("%c", c);
     }
 
-    void SWO::println(int n)
+    void SWO::print(int n)
     {
-        printf("%d\n", n);
+        printf("%d", n);
+    }
+
+    void SWO::print(bool value)
+    {
+        if (value)
+        {
+            print("True");
+        }
+        else
+        {
+            print("False");
+        }
     }
 
     void SWO::println(const char *s)
@@ -57,9 +69,21 @@ namespace naelic
         printf("%c\n", c);
     }
 
-    void SWO::print(const int n)
+    void SWO::println(int n)
     {
-        printf("%d", n);
+        printf("%d\n", n);
     }
 
-} // namespace sixtron
+    void SWO::println(bool value)
+    {
+        if (value)
+        {
+            println("True");
+        }
+        else
+        {
+            println("False");
+        }
+    }
+
+} // namespace naelic
