@@ -1,23 +1,32 @@
 # Serial Wire Output (SWO) Library
 
-Forked for [SWO Library](https://gitlab.com/catie_6tron/swo) to use on NAELIC board.
+Forked for [SWO Library](https://gitlab.com/catie_6tron/swo) to use on NAELIC robot.
+Improved to give some printing function.
 
-Usage:
+## Printing
+
+There is `print`, `println` function for main types.
+
+## Usage
   
 ```cpp
-#include "mbed.h"
-#include "swo.h"
+#include <mbed.h>
+#include <swo.h>
 
-static SWO swo;
+static naelic::SWO swo;
 
 int main() {
-   swo.printf("Hello, World!\n");
+   swo.println("Hello, World!");
 }
 ```
-  
-To monitor SWO output via J-Link debug and trace probe, execute
-`JLinkSWOViewer` with your device name, and CPU frequency e.g.:
+
+
+## Usage 
+
+Install [all J-Link software](https://www.segger.com/downloads/jlink/)
+
+To monitor SWO output via J-Link debug and trace probe, execute :
 
 ```sh
-JLinkSWOViewer -device STM32L496RG -cpufreq 80000000
+JLinkSWOViewer -device STM32L496RG
 ```
