@@ -18,16 +18,23 @@
 
 #include "Stream.h"
 
-namespace naelic {
-
-class SWO : public Stream
+namespace naelic
 {
-public:
-    SWO() {};
 
-protected:
-    int _putc(int c);
-    int _getc();
-};
+    class SWO : public Stream
+    {
+    public:
+        void print(const char *s);
+        void print(char c);
+        void print(int n);
 
-} // namespace sixtron
+        void println(const char *s);
+        void println(char c);
+        void println(int n);
+
+    protected:
+        int _putc(int c);
+        int _getc();
+    };
+
+} // namespace naelic

@@ -18,17 +18,48 @@
 
 #include "swo.h"
 
-namespace naelic {
-
-int SWO::_putc(int c)
+namespace naelic
 {
-    ITM_SendChar(c);
-    return c;
-}
 
-int SWO::_getc()
-{
-    return -1;
-}
+    int SWO::_putc(int c)
+    {
+        ITM_SendChar(c);
+        return c;
+    }
+
+    int SWO::_getc()
+    {
+        return -1;
+    }
+
+    void SWO::print(const char *s)
+    {
+        printf("%s", s);
+    }
+
+    void SWO::print(char c)
+    {
+        printf("%c", c);
+    }
+
+    void SWO::println(int n)
+    {
+        printf("%d\n", n);
+    }
+
+    void SWO::println(const char *s)
+    {
+        printf("%s\n", s);
+    }
+
+    void SWO::println(char c)
+    {
+        printf("%c\n", c);
+    }
+
+    void SWO::print(const int n)
+    {
+        printf("%d", n);
+    }
 
 } // namespace sixtron
