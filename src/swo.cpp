@@ -1,4 +1,3 @@
-#include "mbed.h"
 #include "swo.h"
 
 namespace naelic

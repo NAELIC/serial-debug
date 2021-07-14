@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Stream.h"
+#include <mbed.h>
+#include <Stream.h>
 
 namespace naelic
 {
