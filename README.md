@@ -28,5 +28,5 @@ Install [all J-Link software](https://www.segger.com/downloads/jlink/)
 To monitor SWO output via J-Link debug and trace probe, execute :
 
 ```sh
-JLinkSWOViewer -device STM32L496RG
+JLinkSWOViewer -device STM32L4A6RG
 ```
