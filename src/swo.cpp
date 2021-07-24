@@ -41,6 +41,33 @@ namespace naelic
         }
     }
 
+    void SWO::print(double number, int digits, bool upper)
+    {
+        if (number < 0.0)
+        {
+            print('-');
+            number = -number;
+        }
+
+        int int_part = (int)number;
+        double remainder = number - int_part;
+
+        print(int_part);
+
+        if (digits > 0)
+        {
+            print('.');
+        }
+
+        while (digits-- > 0)
+        {
+            remainder *= 10.0;
+            int to_print = (int)remainder;
+            print(to_print);
+            remainder -= to_print;
+        }
+    }
+
     void SWO::println(const char *s)
     {
         printf("%s\n", s);
@@ -66,6 +93,35 @@ namespace naelic
         {
             println("False");
         }
+    }
+
+    void SWO::println(double number, int digits, bool upper)
+    {
+        if (number < 0.0)
+        {
+            print('-');
+            number = -number;
+        }
+
+        int int_part = (int)number;
+        double remainder = number - int_part;
+
+        print(int_part);
+
+        if (digits > 0)
+        {
+            print('.');
+        }
+
+        while (digits-- > 0)
+        {
+            remainder *= 10.0;
+            int to_print = (int)remainder;
+            print(to_print);
+            remainder -= to_print;
+        }
+
+        print("\n");
     }
 
 } // namespace naelic
